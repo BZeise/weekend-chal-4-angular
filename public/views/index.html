@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vendors/angular.min.js" charset="utf-8"></script>
+    <script src="../scripts/scripts.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Weekend Challenge 4 - Gallery</title>
+</head>
+
+<body ng-app="myApp">
+    <h1>Weekend Challenge 4 - Gallery</h1>
+    <div ng-controller="LifeGallery as lg">
+
+        <div ng-repeat='card in lg.cards' class='card'>
+            <img ng-src={{card.url}} width=100% ng-hide='card.showText' ng-click='lg.toggleCard($index)' />
+            <p ng-show='card.showText' ng-click='lg.toggleCard($index)'>{{ card.description }}</p>
+            <p>
+                Likes: {{ card.likes }} <button ng-click='lg.like($index)'>Like</button>
+            </p>
+        </div>
+        <!--end container -->
+    </div>
+    <!--end ng controller -->
+</body>

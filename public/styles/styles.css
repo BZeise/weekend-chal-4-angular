@@ -1,3 +1,19 @@
 h1 {
   text-align: center;
 }
+
+.card{
+  width: 200px;
+  height: 300px;
+  float: left;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+img {
+  max-width: 200px;
+  max-height: 250px;
+}
