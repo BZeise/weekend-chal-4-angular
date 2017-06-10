@@ -8,6 +8,8 @@ myApp.controller( 'LifeGallery', function(){
 
   // init cards
   vm.cards = [];
+
+  // make a temp object for each picture
   var temp = {
     url: 'pics/walkerPB.jpg',
     description: 'This summer, with Cassie in costume as Westley and Buttercup',

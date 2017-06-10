@@ -11,9 +11,17 @@ h1 {
   padding: 12px;
   margin: 10px;
   overflow: hidden;
+  text-align: center;
 }
 
 img {
   max-width: 200px;
   max-height: 250px;
+}
+
+.imgText {
+  background-color: #cccccc;
+  font-size: 1.1em;
+  display: flex;                   /* defines flexbox */
+  flex-direction: column;          /* top to bottom */
 }
