@@ -24,4 +24,5 @@ img {
   font-size: 1.1em;
   display: flex;                   /* defines flexbox */
   flex-direction: column;          /* top to bottom */
+  vertical-align: baseline;
 }
