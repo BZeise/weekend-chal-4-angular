@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="../vendors/angular.min.js" charset="utf-8"></script>
-    <script src="../scripts/scripts.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <title>Weekend Challenge 4 - Gallery</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../vendors/angular.min.js" charset="utf-8"></script>
+  <script src="../scripts/scripts.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <title>Weekend Challenge 4 - Gallery</title>
 </head>
-
 <body ng-app="myApp">
-    <h1>Weekend Challenge 4 - Gallery</h1>
-    <div ng-controller="LifeGallery as lg">
-
+  <h1>Weekend Challenge 4 - Gallery</h1>
+  <div ng-controller="LifeGallery as lg">
+    <div class="container">
+      <div class="col-xs-11 col-xs-offset-1">
         <div ng-repeat='card in lg.cards' class='card'>
-            <img ng-src={{card.url}} ng-hide='card.showText' ng-click='lg.toggleCard($index)' />
-            <p ng-show='card.showText' ng-click='lg.toggleCard($index)'> {{ card.description }}
-            </p>
-            <p class="imgText text-success">
-                Likes: {{ card.likes }} <button class="btn btn-info btn-xs" ng-click='lg.like($index)'>Like</button>
-            </p>
+          <img ng-src={{card.url}} ng-hide='card.showText' ng-click='card.toggleCard()' />
+          <p ng-show='card.showText' ng-click='card.toggleCard()'> {{ card.desc }}</p>
+          <p class="imgText text-success">
+            Likes: {{ card.likes }} <button class="btn btn-info btn-xs" ng-click='card.likeCard()'>Like</button>
+          </p>
         </div>
-        <!--end container -->
-    </div>
-    <!--end ng controller -->
+      </div>
+    </div> <!--end container -->
+  </div> <!--end ng-controller -->
 </body>
+</html>
